@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #171717;
+    color: #f5f0e8;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    background-color: #351c24;
+    padding: 20px 0;
+    border-bottom: 2px solid #9c7553;
+}
+
+.topo-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.marca {
+    font-size: 30px;
+    color: #e4c29a;
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navegacao a {
+    color: #f5f0e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navegacao a:hover {
+    color: #e4c29a;
+}
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    text-align: center;
+    padding: 65px 0 45px;
+}
+
+.apresentacao h2 {
+    font-size: 36px;
+    color: #e4c29a;
+    margin-bottom: 15px;
+}
+
+.apresentacao p {
+    max-width: 700px;
+    margin: auto;
+    color: #c9c2ba;
+}
+
+/* SEÇÃO DE EVENTOS */
+
+.secao-eventos {
+    padding-bottom: 80px;
+}
+
+.secao-eventos h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* QUADRO DOS EVENTOS */
+
+.quadro-eventos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARTÕES */
+
+.cartao-evento {
+    background-color: #292522;
+    border: 1px solid #544438;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.cartao-evento:hover {
+    transform: translateY(-5px);
+    border-color: #e4c29a;
+}
+
+/* DATA DO EVENTO */
+
+.data-evento {
+    background-color: #493029;
+    padding: 20px;
+    text-align: center;
+    color: #f5f0e8;
+}
+
+.data-evento span {
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.data-evento p {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+/* INFORMAÇÕES */
+
+.conteudo-evento {
+    padding: 25px;
+}
+
+.conteudo-evento h3 {
+    color: #e4c29a;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.conteudo-evento p {
+    color: #c9c2ba;
+    margin-bottom: 15px;
+}
+
+.horario {
+    font-weight: bold;
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    background-color: #8e513d;
+    color: white;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #ad6a4d;
+}
+
+/* JANELAS DOS EVENTOS */
+
+.janela-evento {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* ABRE A JANELA AO CLICAR LINK */
+
+.janela-evento:target {
+    display: flex;
+}
+
+ /* CONTEÚDO DA JANELA */
+
+.janela-conteudo {
+    position: relative;
+    background-color: #292522;
+    border: 1px solid #9c7553;
+    border-radius: 12px;
+
+    padding: 35px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.janela-conteudo h2 {
+    color: #e4c29a;
+    margin-bottom: 20px;
+}
+
+.janela-conteudo p {
+    margin-bottom: 12px;
+    color: #e0d8cf;
+}
+
+.janela-conteudo .botao {
+    margin-top: 15px;
+}
+
+/* BOTÃO DE FECHAR */
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    font-size: 30px;
+    color: #f5f0e8;
+    text-decoration: none;
+}
+
+.fechar:hover {
+    color: #e4c29a;
+}
+
+/* CONFIRMAÇÃO VISUAL */
+
+.confirmacao {
+    text-align: center;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #351c24;
+    padding: 25px;
+    text-align: center;
+    color: #c9c2ba;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .quadro-eventos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topo-conteudo {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .quadro-eventos {
+        grid-template-columns: 1fr;
+    }
+
+    .apresentacao h2 {
+        font-size: 28px;
+    }
+
+    .janela-conteudo {
+        padding: 25px;
+    }
+
+    .navegacao {
+        justify-content: center;
+    }
+}
