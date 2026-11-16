@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4efe6;
     color: #30271f;
 }
@@ -23,27 +23,26 @@ a {
 .topo {
     background-color: #29241f;
     color: #f4efe6;
-    padding: 22px 8%;
+    padding: 24px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
 .logo h1 {
-    margin: 0;
-    color: #e4e2e0;
+    font-size: 27px;
+    color: #d6a75d;;
 }
 
-.logo h2 {
-    margin: 0;
-    color: #d6a75d;
-    font-size: xx-large;
+.imagem1 {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    gap: 10px;
+    width: 0.2cm;
+    height: 0.5cm;
+    scale: 4;
+    padding: 1px 10px;
 }
 
 .menu {
