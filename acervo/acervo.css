@@ -23,6 +23,23 @@ a {
     align-items: center;
 }
 
+.logo h1,
+.marca {
+    color: #d6a75d;
+    font-size: 27px;
+}
+
+.imagem1 {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    gap: 10px;
+    width: 0.2cm;
+    height: 0.5cm;
+    scale: 4;
+    padding: 1px 10px;
+}
+
 .menu {
     display: flex;
     gap: 25px;
@@ -97,30 +114,32 @@ a {
 }
 
 #acervo > h2 {
-    margin-bottom: 22px;
+    width: 100%;
+    margin: 0 0 22px;
     color: #30271f;
     font-size: 30px;
 }
 
 .produtos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 20px;
-    margin-bottom: 40px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 40px;
 }
 
 .produto {
     background-color: white;
+    min-width: 0;
     padding: 16px;
     border-radius: 10px;
 }
 
 .produto img {
     width: 100%;
-    height: auto;
+    height: 260px;
+    object-fit: cover;
     border-radius: 4px;
 }
 
@@ -150,14 +169,84 @@ a {
     font-weight: bold;
 }
 
+.rodape {
+    background-color: #29241f;
+    color: #f4efe6;
+    padding: 55px 10% 20px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.rodape-logo h2 {
+    color: #d6a75d;
+    margin-bottom: 15px;
+    font-size: 27px;
+}
+
+.rodape-conteudo h3 {
+    color: #d6a75d;
+    margin-bottom: 18px;
+}
+
+.rodape-conteudo p {
+    color: #c7bdb0;
+    line-height: 1.7;
+    max-width: 300px;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rodape-links a {
+    color: #c7bdb0;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    color: #d6a75d;
+}
+
+.rodape-final {
+    border-top: 1px solid #51483e;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #a99e91;
+    font-size: 13px;
+}
+
 @media (max-width: 850px) {
+    .topo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .menu {
         flex-wrap: wrap;
         justify-content: center;
     }
 
+    .rodape-conteudo {
+        flex-direction: column;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .produtos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
     }
 }
 
@@ -181,5 +270,6 @@ a {
 
     .produtos {
         grid-template-columns: 1fr;
+        width: 100%;
     }
 }
