@@ -1,0 +1,363 @@
+/* LADO B - PÁGINA SOBRE */
+
+/* PALETA DE CORES */
+:root {
+    --fundo: #f4efe6;
+    --creme: #fffaf2;
+    --bege: #e9dfce;
+    --marrom-escuro: #49392c;
+    --marrom-nav: #29241f;
+    --marrom-titulo: #30271f;
+    --marrom-texto: #665b50;
+    --dourado: #a46d35;
+    --dourado-claro: #d6a75d;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--marrom-titulo);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO / NAVBAR */
+
+.topo {
+    background-color: var(--marrom-nav);
+    color: var(--fundo);
+    padding: 24px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 27px;
+    color: var(--dourado-claro);
+
+    font-family:
+        'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        Verdana,
+        sans-serif;
+}
+
+/* MASCOTE */
+
+.imagem1 {
+    order: -1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.imagem1 img {  
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+/* LINKS DE NAVEGAÇÃO */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: var(--fundo);
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--dourado-claro);
+}
+
+/* APRESENTAÇÃO */
+
+.sobre-apresentacao {
+    background-color: var(--marrom-escuro);
+    color: var(--creme);
+
+    width: 100%;
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.subtitulo {
+    display: block;
+    color: var(--dourado-claro);
+
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.sobre-apresentacao h2 {
+    font-size: 44px;
+    color: var(--creme);
+    margin-bottom: 25px;
+}
+
+.sobre-apresentacao p {
+    max-width: 720px;
+    margin: 0 auto;
+
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--bege);
+}
+
+/* NOSSA HISTÓRIA */
+
+.historia {
+    background-color: var(--fundo);
+    padding: 100px 20px;
+}
+
+.historia h2 {
+    font-size: 38px;
+    color: var(--marrom-titulo);
+    margin-bottom: 30px;
+}
+
+.historia p {
+    max-width: 850px;
+
+    font-size: 19px;
+    line-height: 1.9;
+
+    color: var(--marrom-texto);
+    margin-bottom: 22px;
+}
+
+/* NOSSO PROPÓSITO */
+
+.proposito {
+    background-color: var(--bege);
+
+    width: 100%;
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.proposito .subtitulo {
+    color: var(--dourado);
+}
+
+.proposito h2 {
+    font-size: 38px;
+    color: var(--marrom-titulo);
+    margin-bottom: 25px;
+}
+
+.proposito p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--marrom-texto);
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: var(--marrom-nav);
+    color: var(--fundo);
+    padding: 55px 10% 20px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.rodape-logo h2 {
+    color: var(--dourado-claro);
+    margin-bottom: 15px;
+    font-size: 27px;
+}
+
+.rodape-conteudo h3 {
+    color: var(--dourado-claro);
+    margin-bottom: 18px;
+}
+
+.rodape-conteudo p {
+    color: #c7bdb0;
+    line-height: 1.7;
+    max-width: 300px;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rodape-links a {
+    color: #c7bdb0;
+    transition: color 0.3s;
+}
+
+.rodape-links a:hover {
+    color: var(--dourado-claro);
+}
+
+.rodape-final {
+    border-top: 1px solid #51483e;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    color: #a99e91;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE - TABLET */
+
+@media (max-width: 850px) {
+
+    .topo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-apresentacao {
+        padding: 75px 20px;
+    }
+
+    .sobre-apresentacao h2 {
+        font-size: 36px;
+    }
+
+    .historia,
+    .proposito {
+        padding: 70px 20px;
+    }
+
+    .historia h2,
+    .proposito h2 {
+        font-size: 32px;
+    }
+}
+
+/* RESPONSIVIDADE - CELULAR */
+
+@media (max-width: 480px) {
+
+    .topo {
+        padding: 20px 5%;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .imagem1 img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .menu {
+        gap: 12px 18px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .sobre-apresentacao {
+        padding: 65px 15px;
+    }
+
+    .sobre-apresentacao h2 {
+        font-size: 30px;
+    }
+
+    .sobre-apresentacao p,
+    .historia p,
+    .proposito p {
+        font-size: 16px;
+    }
+
+    .historia,
+    .proposito {
+        padding: 60px 15px;
+    }
+
+    .historia h2,
+    .proposito h2 {
+        font-size: 28px;
+    }
+
+    .subtitulo {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .rodape {
+        padding: 45px 7% 20px;
+    }
+}
