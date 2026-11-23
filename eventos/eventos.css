@@ -1,0 +1,378 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #ffffff;
+    color: #493729;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   CABEÇALHO E NAVEGAÇÃO
+================================= */
+
+.topo {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9dfce;
+    padding: 22px 0;
+}
+
+.topo-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.marca {
+    font-size: 34px;
+    color: #493729;
+    font-weight: bold;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #493729;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    color: #b47a42;
+}
+
+
+/* =================================
+   APRESENTAÇÃO
+================================= */
+
+.apresentacao {
+    background-color: #e9dfce;
+    text-align: center;
+    padding: 75px 35px;
+    margin: 45px 0 65px;
+    border-radius: 4px;
+}
+
+.apresentacao h2 {
+    font-size: 38px;
+    color: #493729;
+    margin-bottom: 18px;
+}
+
+.apresentacao p {
+    font-size: 19px;
+    color: #756456;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   SEÇÃO DE EVENTOS
+================================= */
+
+.secao-eventos {
+    padding-bottom: 80px;
+}
+
+.secao-eventos > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #493729;
+}
+
+.quadro-eventos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* =================================
+   CARDS DOS EVENTOS
+================================= */
+
+.cartao-evento {
+    background-color: #fff9f0;
+    border-radius: 12px;
+    padding: 0px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cartao-evento:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* IMAGEM DOS EVENTOS*/
+
+.imagem-evento {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTEÚDO INTERNO DO CARD */
+
+.conteudo-evento {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* DATA DO EVENTO */
+
+.data-evento {
+    color: #493729;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+/* HORÁRIO */
+
+.horario-evento {
+    color: #493729;
+    font-size: 17px;
+}
+
+/* CONTEÚDO DOS CARDS */
+
+.conteudo-evento {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.conteudo-evento h3 {
+    font-size: 21px;
+    color: #493729;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.conteudo-evento > p {
+    font-size: 16px;
+    color: #756456;
+    margin-bottom: 15px;
+}
+
+.conteudo-evento .horario {
+    font-weight: bold;
+    color: #493729;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   BOTÕES
+================================= */
+
+.botao {
+    display: inline-block;
+    background-color: #493729;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 11px 23px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #a87543;
+    transform: scale(1.03);
+}
+
+
+/* =================================
+   JANELA DE CONFIRMAÇÃO
+================================= */
+
+.janela-evento {
+    display: none;
+}
+
+.janela-evento:target {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.janela-conteudo {
+    background-color: #fff9f0;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.janela-conteudo h2 {
+    color: #493729;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.janela-conteudo p {
+    color: #756456;
+    margin-bottom: 25px;
+}
+
+/* Estilo para os campos de inscrição
+   quando adicionarmos o formulário */
+
+.janela-conteudo input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #c9b9a5;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.janela-conteudo input:focus {
+    outline: none;
+    border-color: #493729;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #493729;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 900px) {
+
+    .quadro-eventos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .topo-conteudo {
+        flex-direction: column;
+    }
+
+    .navegacao {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .marca {
+        font-size: 29px;
+    }
+
+    .apresentacao {
+        padding: 45px 20px;
+        margin: 30px 0 45px;
+    }
+
+    .apresentacao h2 {
+        font-size: 29px;
+    }
+
+    .apresentacao p {
+        font-size: 16px;
+    }
+
+    .quadro-eventos {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-eventos > h2 {
+        font-size: 27px;
+    }
+
+}
+
+/* ===== CAIXA DE DETALHES (MODAL) ===== */
+.modal {
+    display: none;                     /* escondida por padrão */
+    position: fixed;
+    inset: 0;                          /* ocupa a tela toda */
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;                     /* aparece quando o link é clicado */
+}
+
+.modal-caixa {
+    position: relative;
+    background-color: #fff8ef;
+    max-width: 500px;
+    width: 90%;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-info {
+    font-weight: bold;
+    color: #4a3728;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 32px;
+    color: #4a3728;
+    text-decoration: none;
+}

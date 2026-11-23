@@ -1,5 +1,6 @@
 
 
+
 .hero {
     min-height: 570px;
     padding: 70px 10%;
@@ -57,8 +58,8 @@
 }
 
 .hero-imagem img {
-    width: 440px;
-    height: 440px;
+    width: 400px;
+    height: 400px;
     object-fit: contain;
     display: block;
     background: transparent;

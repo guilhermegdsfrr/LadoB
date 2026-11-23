@@ -7,30 +7,27 @@
 
     <title>Eventos | Lado B</title>
 
-    <!-- base.css primeiro; eventos.css depois, apenas com regras específicas da página -->
-    <link rel="stylesheet" href="../inicio/base.css">
     <link rel="stylesheet" href="eventos.css">
 </head>
 
 <body>
 
-    <!-- CABEÇALHO (copiado da página inicial) -->
+    <!-- CABEÇALHO -->
     <header class="topo">
-        <div class="logo">
-            <h1>Lado B</h1>
-            <div class="imagem1">
-                <img src="../inicio/logo.png" alt="Logo mascote">
-            </div>
-        </div>
+        <div class="container topo-conteudo">
 
-        <nav class="menu">
-            <a href="../inicio/inicio.html">Início</a>
-            <a href="../acervo/acervo.html">Acervo</a>
-            <a href="../como trocar/como-trocar.html">Como Trocar</a>
-            <a href="eventos.html" class="ativo">Eventos</a>
-            <a href="../sobre/sobre.html">Sobre</a>
-            <a href="../contato/contato.html">Contato</a>
-        </nav>
+            <h1 class="marca">Lado B</h1>
+
+            <nav class="navegacao">
+                <a href="../inicio/inicio.html">Início</a>
+                <a href="../acervo/acervo.html">Acervo</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="../como trocar/como-trocar.html">Como Trocar</a>
+                <a href="../sobre/sobre.html">Sobre</a>
+                <a href="../contato/contato.html">Contato</a>
+            </nav>
+
+        </div>
     </header>
 
     <main class="container">
@@ -47,31 +44,34 @@
         </section>
 
         <!-- QUADRO DE EVENTOS -->
-        <section class="secao-eventos">
+        <section class="secao-eventos" id="eventos">
 
             <h2>Próximos Eventos</h2>
 
             <div class="quadro-eventos">
 
                 <!-- EVENTO 1 -->
-                <article class="cartao-evento">
+                <article class="cartao-evento" id="evento1">
 
-                    <div class="data-evento">
-                        <span>22</span>
-                        <p>NOV</p>
-                    </div>
+                    <img src="feira-de-disco.png" 
+                    alt="Feira de troca de disco de vinil"
+                    class="imagem-evento">
 
                     <div class="conteudo-evento">
-                        <h3>Encontro de Colecionadores</h3>
+                        <h3>Feira de compra e troca de disco de vinil</h3>
 
                         <p>
                             Um encontro especial para apaixonados
                             por discos de vinil.
                         </p>
 
+                        <div class="data-evento">
+                            <strong>19 NOV</strong>
+                        </div>
+
                         <p class="horario">14h às 17h</p>
 
-                        <a href="#evento1" class="botao">
+                        <a href="#detalhes1" class="botao">
                             Ver detalhes
                         </a>
                     </div>
@@ -79,24 +79,26 @@
                 </article>
 
                 <!-- EVENTO 2 -->
-                <article class="cartao-evento">
+                <article class="cartao-evento" id="evento2">
 
-                    <div class="data-evento">
-                        <span>29</span>
-                        <p>NOV</p>
-                    </div>
+                    <img src="disco-as-cegas.jpeg" alt="Disco as cegas"
+                    class="imagem-evento">
 
                     <div class="conteudo-evento">
-                        <h3>Feira de Discos</h3>
+                        <h3>Disco às cegas</h3>
 
                         <p>
                             Descubra novos álbuns e compartilhe
                             sua paixão pela música.
                         </p>
 
-                        <p class="horario">10h às 16h</p>
+                        <div class="data-evento">
+                            <strong>29 NOV</strong>
+                        </div>
 
-                        <a href="#evento2" class="botao">
+                        <p class="horario">18h às 20h</p>
+
+                        <a href="#detalhes2" class="botao">
                             Ver detalhes
                         </a>
                     </div>
@@ -104,115 +106,119 @@
                 </article>
 
                 <!-- EVENTO 3 -->
-                <article class="cartao-evento">
+                <article class="cartao-evento" id="evento3">
 
-                    <div class="data-evento">
-                        <span>06</span>
-                        <p>DEZ</p>
-                    </div>
+                    <img src="sexta-do-garimpo.png" alt="Sexta do garimpo"
+                    class="imagem-evento">
 
                     <div class="conteudo-evento">
-                        <h3>Sessão de Escuta</h3>
+                        <h3>Sexta do garimpo</h3>
 
                         <p>
-                            Uma tarde para ouvir discos,
-                            descobrir artistas e conversar.
+                            Uma dia para ouvir discos,
+                            descobrir artistas e conversar com 
+                            outras pessoas interessadas no mesmo
+                            gosto que você!
                         </p>
 
-                        <p class="horario">15h às 18h</p>
+                        <div class="data-evento">
+                            <strong>11 DEZ</strong>
+                        </div>
 
-                        <a href="#evento3" class="botao">
+                        <p class="horario">15h às 20h</p>
+
+                        <a href="#detalhes3" class="botao">
                             Ver detalhes
+                        </a>
+                    </div>
+                </article>
+
+                <!-- EVENTO 4 -->
+
+                <article class="cartao-evento" id="evento4">
+
+                    <img src="exposicao-de-arte-de-vinil.png" 
+                    alt="Exposição artística de capas de disco"
+                    class="imagem-evento">
+
+                    <div class="conteudo-evento">
+                        <h3>Exposição artística de capas de disco</h3>
+
+                        <p>
+                            Experiencia de exposição de artes das capas de disco e
+                            álbuns mais importantes para a história da música e da arte.
+                        </p>
+
+                        <div class="data-evento">
+                            <strong>18 DEZ</strong>
+                        </div>
+
+                        <p class="horario"> 17h às 20h</p>
+
+                        <a href="#detalhes4" class="botao">
+                            ver detalhes
                         </a>
                     </div>
 
                 </article>
 
+                <!-- EVENTO 5 -->
+                <article class="cartao-evento" id="evento5">
+                    <img src="oficina-de-criacao-de-capas-de-disco.png" alt="Oficina de capas de disco"
+                    class="imagem-evento">
+
+                    <div class="conteudo-evento">
+                        <h3>Oficina de criação de capas de disco</h3>
+
+                        <p>
+                            Crie sua própria capa de disco usando sua criatividade e 
+                            se inspirando nos seus artistas favoritos, leve para casa 
+                            sua obra de arte feita no: Lado B.
+                        </p>
+
+                        <div class="data-evento">
+                            <strong>20 DEZ</strong>
+                        </div>
+
+                        <p class="horario"> 17h às 19h</p>
+
+                        <a href="#detalhes5" class="botao">
+                            ver detalhes
+                        </a>
+                    </div>
+
+                </article>
+                
+                <!-- EVENTO 6 -->
+                <article class="cartao-evento" id="evento6">
+                    <img src="documentario.png" alt="documentario sobre album"
+                    class="imagem-evento">
+
+                    <div class="conteudo-evento">
+                        <h3>Documentário sobre um álbum 
+                            escolhido por você!
+                        </h3>
+
+                        <p>
+                            Documentário sobre os álbuns mais icônicos na história
+                            da música e sua relevância no cenário atual, seguido de
+                            debate com artistas.
+                        </p>
+                    
+                        <div class="data-evento">
+                            <strong>22 JAN</strong>
+                        </div>
+
+                        <p class="horario"> 16h às 17h</p>
+
+                        <a href="#detalhes6" class="botao">
+                            ver detalhes
+                        </a>
+                    </div>
+                </article>
             </div>
         </section>
-
     </main>
-
-    <!-- JANELA DO EVENTO 1 -->
-    <section id="evento1" class="janela-evento">
-
-        <div class="janela-conteudo">
-
-            <a href="#eventos" class="fechar">×</a>
-
-            <h2>Encontro de Colecionadores</h2>
-
-            <p><strong>Data:</strong> 22 de novembro</p>
-            <p><strong>Horário:</strong> 14h às 17h</p>
-            <p><strong>Local:</strong> Espaço Lado B</p>
-            <p><strong>Endereço:</strong> A definir</p>
-
-            <p>
-                Venha conhecer outros colecionadores,
-                compartilhar histórias e conversar
-                sobre seus discos favoritos.
-            </p>
-
-            <a href="#confirmacao" class="botao">
-                Confirmar presença
-            </a>
-
-        </div>
-    </section>
-
-    <!-- JANELA DO EVENTO 2 -->
-    <section id="evento2" class="janela-evento">
-
-        <div class="janela-conteudo">
-
-            <a href="#eventos" class="fechar">×</a>
-
-            <h2>Feira de Discos</h2>
-
-            <p><strong>Data:</strong> 29 de novembro</p>
-            <p><strong>Horário:</strong> 10h às 16h</p>
-            <p><strong>Local:</strong> A definir</p>
-            <p><strong>Endereço:</strong> A definir</p>
-
-            <p>
-                Explore diferentes gêneros musicais,
-                encontre novos discos e conheça
-                outros apaixonados por vinil.
-            </p>
-
-            <a href="#confirmacao" class="botao">
-                Confirmar presença
-            </a>
-
-        </div>
-    </section>
-
-    <!-- JANELA DO EVENTO 3 -->
-    <section id="evento3" class="janela-evento">
-
-        <div class="janela-conteudo">
-
-            <a href="#eventos" class="fechar">×</a>
-
-            <h2>Sessão de Escuta</h2>
-
-            <p><strong>Data:</strong> 06 de dezembro</p>
-            <p><strong>Horário:</strong> 15h às 18h</p>
-            <p><strong>Local:</strong> Espaço Lado B</p>
-            <p><strong>Endereço:</strong> A definir</p>
-
-            <p>
-                Participe de uma sessão coletiva
-                para ouvir álbuns e compartilhar
-                experiências musicais.
-            </p>
-
-            <a href="#confirmacao" class="botao">
-                Confirmar presença
-            </a>
-
-        </div>
-    </section>
 
     <!-- CONFIRMAÇÃO VISUAL -->
     <section id="confirmacao" class="janela-evento">
@@ -226,50 +232,82 @@
                 Sua presença ainda não foi registrada.
             </p>
 
-            <a href="#eventos" class="botao">
+            <a href="#detalhes" class="botao">
                 Voltar aos eventos
             </a>
 
         </div>
     </section>
 
- <footer class="rodape">
-    <div class="rodape-conteudo">
-      <div class="rodape-logo">
-        <h2>Lado B</h2>
+    <footer class="rodape">
+        <p>© 2026 Lado B — A música nos conecta.</p>
+    </footer>
 
-        <p>
-          Conectando colecionadores, compartilhando música e mantendo a paixão
-          pelo vinil viva.
-        </p>
-      </div>
-
-      <div class="rodape-links">
-        <h3>Navegação</h3>
-
-        <a href="index.html">Início</a>
-        <a href="acervo.html">Acervo</a>
-        <a href="como-trocar.html">Como Trocar</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="contato.html">Contato</a>
-      </div>
-
-      <div class="rodape-info">
-        <h3>Nosso propósito</h3>
-
-        <p>
-          Incentivar a cultura musical, a sustentabilidade e a circulação de
-          discos de vinil entre colecionadores.
-        </p>
-      </div>
+<!-- CAIXA EVENTO 1 -->
+<div class="modal" id="detalhes1">
+    <div class="modal-caixa">
+        <a href="#" class="modal-fechar">×</a>
+        <h3>Feira de compra e troca de disco de vinil</h3>
+        <p class="modal-info">19 NOV · 14h às 17h</p>
+        <p>Traga seus discos para trocar ou vender e garimpe raridades com outros colecionadores. Haverá mesas de expositores e toca-discos para testar os LPs antes de levar.</p>
+        <a href="inscricao.html?evento=1" class="botao">Inscrever-se</a>
     </div>
+</div>
 
-    <div class="rodape-final">
-      <p>© 2026 Lado B. Todos os direitos reservados.</p>
-
-      <p>Feito por amantes da música.</p>
+<!-- CAIXA EVENTO 2 -->
+<div class="modal" id="detalhes2">
+    <div class="modal-caixa">
+        <a href="#" class="modal-fechar">×</a>
+        <h3>Disco às cegas</h3>
+        <p class="modal-info">29 NOV · 18h às 20h</p>
+        <p>Ouvimos discos sem revelar o artista nem a capa. Cada um anota suas impressões e, no final, revelamos o álbum e conversamos sobre as descobertas.</p>
+        <a href="inscricao.html?evento=2" class="botao">Inscrever-se</a>
     </div>
+</div>
+
+<!-- CAIXA EVENTO 3 -->
+<div class="modal" id="detalhes3">
+    <div class="modal-caixa">
+        <a href="#" class="modal-fechar">×</a>
+        <h3>Sexta do garimpo</h3>
+        <p class="modal-info">11 DEZ · 15h às 20h</p>
+        <p>Caixas com discos raros e usados separados especialmente para o dia. Um ótimo momento para descobrir artistas novos e trocar ideias com quem curte o mesmo som.</p>
+        <a href="inscricao.html?evento=3" class="botao">Inscrever-se</a>
+    </div>
+</div>
+
+<!-- CAIXA EVENTO 4 -->
+<div class="modal" id="detalhes4">
+    <div class="modal-caixa">
+        <a href="#" class="modal-fechar">×</a>
+        <h3>Exposição artística de capas de disco</h3>
+        <p class="modal-info">18 DEZ · 17h às 20h</p>
+        <p>Uma galeria com as capas de disco e álbuns mais importantes para a história da música e da arte. Passeie pela exposição e descubra as histórias por trás de cada capa.</p>
+        <a href="inscricao.html?evento=4" class="botao">Inscrever-se</a>
+    </div>
+</div>
+
+<!-- CAIXA EVENTO 5 -->
+<div class="modal" id="detalhes5">
+    <div class="modal-caixa">
+        <a href="#" class="modal-fechar">×</a>
+        <h3>Oficina de criação de capas de disco</h3>
+        <p class="modal-info">20 DEZ · 17h às 19h</p>
+        <p>Crie sua própria capa de disco usando sua criatividade e se inspirando nos seus artistas favoritos. Todo o material é fornecido, e você leva para casa sua obra de arte feita no Lado B.</p>
+        <a href="inscricao.html?evento=5" class="botao">Inscrever-se</a>
+    </div>
+</div>
+
+<!-- CAIXA EVENTO 6 -->
+<div class="modal" id="detalhes6">
+    <div class="modal-caixa">
+        <a href="#" class="modal-fechar">×</a>
+        <h3>Documentário sobre um álbum escolhido por você!</h3>
+        <p class="modal-info">22 JAN · 16h às 17h</p>
+        <p>Exibição de um documentário sobre um dos álbuns mais icônicos da história da música, escolhido pelo público, seguida de um debate com artistas sobre sua relevância no cenário atual.</p>
+        <a href="inscricao.html?evento=6" class="botao">Inscrever-se</a>
+    </div>
+</div>
 
 </body>
 
