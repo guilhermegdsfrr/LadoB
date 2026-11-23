@@ -29,21 +29,33 @@ a {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
 .logo h1 {
     font-size: 27px;
     color: #d6a75d;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
 }
 
 .imagem1 {
+    order: -1;
     display: flex;
-    align-items: right;
-    justify-content: right;
-    gap: 10px;
-    width: 0.2cm;
-    height: 0.5cm;
-    scale: 4;
-    padding: 1px 10px;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+}
+
+.imagem1 img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
 }
 
 .menu {
