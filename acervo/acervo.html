@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo | LadoB</title>
+    <link rel="stylesheet" href="acervo.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="container topo-conteudo">
+            <div class="logo">
+                <div class="imagem1">
+                    <img src="../logo.png" alt="Logo LadoB">
+                </div>
+                <h1>LadoB</h1>
+            </div>
+            <nav class="menu" aria-label="Navegação principal">
+                <a href="../inicio/inicio.html">Início</a>
+                <a class="ativo" href="#acervo">Acervo</a>
+                <a href="../como trocar/como-trocar.html">Como trocar</a>
+                <a href="../sobre/sobre.html">Sobre</a>
+                <a href="../eventos/eventos.html">Eventos</a>
+                <a href="../contato/contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Apresentação -->
+        <section class="apresentacao">
+            <h1>Encontre seu próximo disco</h1>
+            <p>Discos e CDs anunciados para venda ou troca por quem ama música.</p>
+            <a href="#acervo" class="botao">Explorar o acervo</a>
+        </section>
+
+        <!-- Acervo -->
+        <section id="acervo">
+            <h2>Acervo</h2>
+
+            <!-- Cadastro -->
+            <details class="cadastro-produto">
+                <summary>Adicionar novo produto</summary>
+                <form id="form-produto" class="form-produto">
+                    <label>
+                        Nome
+                        <input type="text" name="nome" required>
+                    </label>
+                    <label>
+                        Categoria
+                        <select name="categoria" required>
+                            <option value="rock">Rock</option>
+                            <option value="mpb">MPB</option>
+                            <option value="classica">Clássica</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="samba">Samba</option>
+                        </select>
+                    </label>
+                    <label>
+                        Formato
+                        <select name="formato" required>
+                            <option value="LP">LP</option>
+                            <option value="CD">CD</option>
+                        </select>
+                    </label>
+                    <label>
+                        Preço
+                        <input type="number" name="preco" min="0" step="0.01" required>
+                    </label>
+                    <label>
+                        Ano de lançamento
+                        <input type="number" name="lancamento" min="1900" max="2099" required>
+                    </label>
+                    <label>
+                        Estado
+                        <select name="estado" required>
+                            <option value="Novo">Novo</option>
+                            <option value="Usado">Usado</option>
+                        </select>
+                    </label>
+                    <label>
+                        Conservação
+                        <select name="conservacao" required>
+                            <option value="Excelente">Excelente</option>
+                            <option value="Muito bom">Muito bom</option>
+                            <option value="Bom">Bom</option>
+                            <option value="Regular">Regular</option>
+                        </select>
+                    </label>
+                    <label>
+                        Caminho da imagem
+                        <input type="text" name="imagem" value="../disco.png">
+                    </label>
+                    <label class="campo-descricao">
+                        Descrição
+                        <textarea name="descricao" rows="3" required></textarea>
+                    </label>
+                    <div class="form-produto-acoes">
+                        <button type="submit" class="botao">Salvar produto</button>
+                        <button type="button" class="botao botao-secundario" id="limpar-produtos">Limpar adicionados</button>
+                    </div>
+                </form>
+            </details>
+
+            <!-- Filtros -->
+            <nav class="categorias" aria-label="Categorias do acervo">
+                <a href="#rock">Rock</a>
+                <a href="#mpb">MPB</a>
+                <a href="#classica">Clássica</a>
+                <a href="#jazz">Jazz</a>
+                <a href="#samba">Samba</a>
+            </nav>
+
+            <!-- Rock -->
+            <section class="categoria-produtos" id="rock" aria-labelledby="titulo-rock">
+                <h2 id="titulo-rock">Rock</h2>
+                <div class="produtos">
+                    <!-- Produto -->
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de rock">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Rock Clássico</h3>
+                        <p>Álbum raro em vinil, capa original e bom estado.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1977</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Muito bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 80,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="CD de rock">
+                        <span class="tipo-produto">CD</span>
+                        <h3>Rock Nacional</h3>
+                        <p>CD original com encarte completo e excelente conservação.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1998</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 35,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de rock alternativo">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Rock Alternativo</h3>
+                        <p>Disco para colecionadores, edição importada e lacrada.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2024</dd></div>
+                            <div><dt>Estado</dt><dd>Novo</dd></div>
+                            <div><dt>Conservação</dt><dd>Lacrado</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 120,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- MPB -->
+            <section class="categoria-produtos" id="mpb" aria-labelledby="titulo-mpb">
+                <h2 id="titulo-mpb">MPB</h2>
+                <div class="produtos">
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de MPB">
+                        <span class="tipo-produto">LP</span>
+                        <h3>MPB Essencial</h3>
+                        <p>Coletânea em vinil com grandes nomes da música brasileira.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1984</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Muito bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 90,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="CD de MPB">
+                        <span class="tipo-produto">CD</span>
+                        <h3>MPB Acústica</h3>
+                        <p>CD original com arranjos acústicos e encarte completo.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2012</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 40,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de MPB">
+                        <span class="tipo-produto">LP</span>
+                        <h3>MPB Brasil</h3>
+                        <p>Disco clássico em ótima audição e capa preservada.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1975</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 75,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Clássica -->
+            <section class="categoria-produtos" id="classica" aria-labelledby="titulo-classica">
+                <h2 id="titulo-classica">Clássica</h2>
+                <div class="produtos">
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de música clássica">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Sinfonias</h3>
+                        <p>Disco duplo com uma seleção de grandes sinfonias.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1969</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Muito bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 95,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="CD de música clássica">
+                        <span class="tipo-produto">CD</span>
+                        <h3>Concertos</h3>
+                        <p>CD remasterizado com peças para piano e orquestra.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2008</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Excelente</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 45,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de ópera">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Árias e Ópera</h3>
+                        <p>LP com interpretações clássicas e capa ilustrada.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1982</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 110,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Jazz -->
+            <section class="categoria-produtos" id="jazz" aria-labelledby="titulo-jazz">
+                <h2 id="titulo-jazz">Jazz</h2>
+                <div class="produtos">
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de jazz">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Jazz Tradicional</h3>
+                        <p>Vinil clássico com gravação histórica e ótimo estado.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1962</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Muito bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 100,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="CD de jazz">
+                        <span class="tipo-produto">CD</span>
+                        <h3>Jazz Moderno</h3>
+                        <p>CD com músicos contemporâneos e encarte original.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2015</dd></div>
+                            <div><dt>Estado</dt><dd>Novo</dd></div>
+                            <div><dt>Conservação</dt><dd>Excelente</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 50,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de bossa jazz">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Bossa Jazz</h3>
+                        <p>LP importado reunindo ritmos de jazz e bossa nova.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2023</dd></div>
+                            <div><dt>Estado</dt><dd>Novo</dd></div>
+                            <div><dt>Conservação</dt><dd>Lacrado</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 130,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Samba -->
+            <section class="categoria-produtos" id="samba" aria-labelledby="titulo-samba">
+                <h2 id="titulo-samba">Samba</h2>
+                <div class="produtos">
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de samba">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Samba de Raiz</h3>
+                        <p>Vinil com sambas tradicionais e gravação original.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>1978</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Muito bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 85,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="CD de samba">
+                        <span class="tipo-produto">CD</span>
+                        <h3>Samba Cantado</h3>
+                        <p>CD nacional em excelente estado com encarte.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2010</dd></div>
+                            <div><dt>Estado</dt><dd>Usado</dd></div>
+                            <div><dt>Conservação</dt><dd>Bom</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 38,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                    <article class="produto">
+                        <img src="../disco.png" alt="LP de samba moderno">
+                        <span class="tipo-produto">LP</span>
+                        <h3>Samba Contemporâneo</h3>
+                        <p>Disco recente com produção independente e capa especial.</p>
+                        <dl class="detalhes-card">
+                            <div><dt>Lançamento</dt><dd>2025</dd></div>
+                            <div><dt>Estado</dt><dd>Novo</dd></div>
+                            <div><dt>Conservação</dt><dd>Lacrado</dd></div>
+                        </dl>
+                        <div class="produto-rodape">
+                            <span class="preço">R$ 70,00</span>
+                            <a href="https://api.whatsapp.com/send?phone=5511999999999" class="botao" target="_blank">Tenho interesse</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-logo">
+                <h2>LadoB</h2>
+                <p>Um espaço para descobrir, vender e trocar discos com outros amantes da música.</p>
+            </div>
+
+            <div>
+                <h3>Navegação</h3>
+                <nav class="rodape-links" aria-label="Navegação do rodapé">
+                    <a href="../inicio/inicio.html">Início</a>
+                    <a href="#acervo">Acervo</a>
+                    <a href="../como trocar/como-trocar.html">Como trocar</a>
+                    <a href="../sobre/sobre.html">Sobre</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+                <nav class="rodape-links" aria-label="Contato do rodapé">
+                    <a href="../contato/contato.html">Fale conosco</a>
+                    <a href="../eventos/eventos.html">Eventos</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="rodape-final">
+            <span>&copy; 2026 LadoB</span>
+            <span>Música para compartilhar</span>
+        </div>
+    </footer>
+
+    <!-- Filtros -->
+    <script>
+        const linksCategorias = document.querySelectorAll('.categorias a');
+        const secoesCategorias = document.querySelectorAll('.categoria-produtos');
+
+        function atualizarCategoriaAtiva() {
+            const categoriaAtual = window.location.hash;
+            const hashesCategorias = new Set(
+                Array.from(secoesCategorias, (secao) => `#${secao.id}`)
+            );
+            const filtroAtivo = hashesCategorias.has(categoriaAtual);
+
+            linksCategorias.forEach((link) => {
+                link.classList.toggle('categoria-ativa', filtroAtivo && link.hash === categoriaAtual);
+            });
+
+            secoesCategorias.forEach((secao) => {
+                secao.hidden = filtroAtivo && `#${secao.id}` !== categoriaAtual;
+            });
+        }
+
+        linksCategorias.forEach((link) => {
+            link.addEventListener('click', (evento) => {
+                evento.preventDefault();
+
+                const categoriaSelecionada = link.hash;
+                const categoriaAtual = window.location.hash;
+
+                if (categoriaAtual === categoriaSelecionada) {
+                    history.pushState(null, '', window.location.pathname);
+                    document.querySelector('#acervo')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    history.pushState(null, '', categoriaSelecionada);
+                    document.querySelector(categoriaSelecionada)?.scrollIntoView({ behavior: 'smooth' });
+                }
+
+                atualizarCategoriaAtiva();
+            });
+        });
+
+        window.addEventListener('hashchange', atualizarCategoriaAtiva);
+        window.addEventListener('popstate', atualizarCategoriaAtiva);
+        atualizarCategoriaAtiva();
+
+        const chaveProdutos = 'ladoB-produtos-adicionados';
+        const formProduto = document.querySelector('#form-produto');
+        const botaoLimparProdutos = document.querySelector('#limpar-produtos');
+
+        function lerProdutos() {
+            return JSON.parse(localStorage.getItem(chaveProdutos) || '[]');
+        }
+
+        function criarCardProduto(produto) {
+            const artigo = document.createElement('article');
+            artigo.className = 'produto';
+
+            const imagem = document.createElement('img');
+            imagem.src = produto.imagem;
+            imagem.alt = `${produto.formato} de ${produto.nome}`;
+
+            const formato = document.createElement('span');
+            formato.className = 'tipo-produto';
+            formato.textContent = produto.formato;
+
+            const titulo = document.createElement('h3');
+            titulo.textContent = produto.nome;
+
+            const descricao = document.createElement('p');
+            descricao.textContent = produto.descricao;
+
+            const detalhes = document.createElement('dl');
+            detalhes.className = 'detalhes-card';
+
+            [
+                ['Lançamento', produto.lancamento],
+                ['Estado', produto.estado],
+                ['Conservação', produto.conservacao]
+            ].forEach(([rotulo, valor]) => {
+                const item = document.createElement('div');
+                const termo = document.createElement('dt');
+                const descricaoValor = document.createElement('dd');
+                termo.textContent = rotulo;
+                descricaoValor.textContent = valor;
+                item.append(termo, descricaoValor);
+                detalhes.append(item);
+            });
+
+            const rodape = document.createElement('div');
+            rodape.className = 'produto-rodape';
+
+            const preco = document.createElement('span');
+            preco.className = 'preço';
+            preco.textContent = `R$ ${Number(produto.preco).toLocaleString('pt-BR', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            })}`;
+
+            const interesse = document.createElement('a');
+            interesse.className = 'botao';
+            interesse.href = 'https://api.whatsapp.com/send?phone=5511999999999';
+            interesse.target = '_blank';
+            interesse.rel = 'noopener';
+            interesse.textContent = 'Tenho interesse';
+
+            rodape.append(preco, interesse);
+            artigo.append(imagem, formato, titulo, descricao, detalhes, rodape);
+
+            return artigo;
+        }
+
+        function mostrarProdutosAdicionados() {
+            document.querySelectorAll('[data-produto-adicionado]').forEach((produto) => produto.remove());
+
+            lerProdutos().forEach((produto) => {
+                const secao = document.querySelector(`#${produto.categoria} .produtos`);
+                if (secao) {
+                    const card = criarCardProduto(produto);
+                    card.dataset.produtoAdicionado = 'true';
+                    secao.append(card);
+                }
+            });
+        }
+
+        formProduto.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+
+            const dados = new FormData(formProduto);
+            const novoProduto = Object.fromEntries(dados.entries());
+            const produtos = lerProdutos();
+
+            produtos.push(novoProduto);
+            localStorage.setItem(chaveProdutos, JSON.stringify(produtos));
+            formProduto.reset();
+            formProduto.querySelector('[name="imagem"]').value = '../disco.png';
+            mostrarProdutosAdicionados();
+            document.querySelector(`#${novoProduto.categoria}`).scrollIntoView({ behavior: 'smooth' });
+        });
+
+        botaoLimparProdutos.addEventListener('click', () => {
+            localStorage.removeItem(chaveProdutos);
+            mostrarProdutosAdicionados();
+        });
+
+        mostrarProdutosAdicionados();
+    </script>
+</body>
+
+</html>
