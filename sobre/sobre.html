@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sobre Nós | Lado B</title>
 
     <!-- CSS página Sobre -->
     <link rel="stylesheet" href="sobre.css">
+
+    <!-- js sobre carrose -->
+     <script> src= "sobre.js"</script>
 </head>
 
 <body>
@@ -20,8 +22,7 @@
         <div class="logo">
             <h1>Lado B</h1>
             <div class="imagem1">
-                <img src="../logo.png"
-                     alt="Logo mascote do Lado B">
+                <img src="../logo.png" alt="Logo mascote do Lado B">
             </div>
         </div>
 
@@ -30,9 +31,7 @@
             <a href="../acervo/acervo.html">Acervo</a>
             <a href="../como-trocar/como-trocar.html">Como Trocar</a>
             <a href="../eventos/eventos.html">Eventos</a>
-            <a href="sobre.html"
-               class="ativo"
-               aria-current="page">Sobre</a>
+            <a href="sobre.html" class="ativo" aria-current="page">Sobre</a>
             <a href="../contato/contato.html">Contato</a>
         </nav>
 
@@ -63,7 +62,13 @@
         <!-- NOSSA HISTÓRIA -->
         <section class="historia">
 
-            <div class="container">
+            <!-- Imagem do carrosel -->
+            <img id="slide" src="imagens_fundo/fundo 1.png" alt="" aria-hidden="true">
+
+            <!-- Camada 1 -->
+            <div class="historia-overlay"></div>
+            <!-- Conteúdo fixa -->
+            <div class="container historia-conteudo">
 
                 <h2>Nossa história</h2>
 
@@ -86,6 +91,7 @@
             </div>
 
         </section>
+
 
         <!-- NOSSO PROPÓSITO -->
         <section class="proposito">
@@ -163,4 +169,5 @@
     </footer>
 
 </body>
+
 </html>
