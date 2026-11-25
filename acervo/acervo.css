@@ -50,6 +50,17 @@ a {
     align-items: center;
     gap: 18px;
     flex-shrink: 0;
+    border-radius: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo:focus-visible {
+    outline: 2px solid #d6a75d;
+    outline-offset: 4px;
 }
 
 .logo h1 {
@@ -167,9 +178,8 @@ a {
 
 /* Apresentação */
 .apresentacao {
-    margin: 36px auto 48px;
+    margin: 0;
     padding: 64px 24px;
-    border-radius: 6px;
     background-color: #e9dfd0;
     text-align: center;
 }
@@ -302,11 +312,11 @@ a {
 /* Produtos */
 .produtos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 8px;
     margin-bottom: 40px;
 }
 
@@ -314,7 +324,7 @@ a {
 .produto {
     position: relative;
     background-color: white;
-    padding: 16px;
+    padding: 12px;
     border-radius: 10px;
 }
 
@@ -339,13 +349,14 @@ a {
 .produto h3 {
     margin-bottom: 8px;
     color: #30271f;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .produto > p {
     min-height: 48px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     color: #66594a;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -353,12 +364,12 @@ a {
 .detalhes-card {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
-    margin-bottom: 18px;
+    gap: 5px;
+    margin-bottom: 14px;
 }
 
 .detalhes-card div {
-    padding: 8px;
+    padding: 6px;
     border-radius: 6px;
     background-color: #f4efe6;
 }
@@ -366,13 +377,13 @@ a {
 .detalhes-card dt {
     margin-bottom: 3px;
     color: #78502b;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
 }
 
 .detalhes-card dd {
     color: #30271f;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* Rodapé do card */
@@ -385,8 +396,13 @@ a {
 
 .preço {
     color: #30271f;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
+}
+
+.produto .botao {
+    padding: 10px 12px;
+    font-size: 14px;
 }
 
 @media (max-width: 850px) {
@@ -430,7 +446,6 @@ a {
     }
 
     .apresentacao {
-        margin-top: 24px;
         padding: 48px 18px;
     }
 
