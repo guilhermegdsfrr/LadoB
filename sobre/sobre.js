@@ -1,10 +1,11 @@
-
 // lista de imagens do carrossel
 
+console.log("JavaScritp funcionando")
+
 const imagens = [
-    "imagens_fundo",
-    "fundo 2.png",
-    "fundo 3.jpg"
+    "imagens_fundo/fundo 1.png",
+    "imagens_fundo/fundo 2.png",
+    "imagens_fundo/fundo 3.png",
 ];
 
 // anti carregamento das imagens

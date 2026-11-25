@@ -7,8 +7,8 @@
     --bege: #e9dfce;
     --marrom-escuro: #49392c;
     --marrom-nav: #29241f;
-    --marrom-titulo: #30271f;
-    --marrom-texto: #665b50;
+    --marrom-titulo: #b3aaa2;
+    --marrom-texto: #b8b0a9;
     --dourado: #a46d35;
     --dourado-claro: #d6a75d;
 }
@@ -162,7 +162,7 @@ a {
     display: flex;
     align-items: center;
     /*------*/
-    background-color: #49392c;
+    background-color: lab(62.92% 4.25 11.55);
 }
 /* IMAGENS DO CARROSSEL */
 
