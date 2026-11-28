@@ -164,39 +164,58 @@ a {
     /*------*/
     background-color: lab(62.92% 4.25 11.55);
 }
+
+.historia-imagens{
+    position: relative;
+    overflow: hidden;
+}
 /* IMAGENS DO CARROSSEL */
-
-#slide {
+.slide {
     position: absolute;
-    top: 0;
-    left: 0;
-
+    inset: 0;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center;
-
-    transition: opacity 0.5s ease-in-out;
-
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
     z-index: 0;
 }
+
+.slide.ativo {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide.entrando {
+    opacity: 1;
+    z-index: 2;
+}
+
 /* CAMADA ESCURA SOBRE A IMAGEM */
 
 .historia-overlay {
     position: absolute;
     inset: 0;
-
-    background-color: rgba(0, 0, 0, 0.60);
-
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 3;
+    pointer-events: none;
 }
 
 /* TEXTO SOBRE A IMAGEM */
 
 .historia-conteudo {
     position: relative;
-    z-index: 2;
+    z-index: 4;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.historia-conteudo.oculto {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .historia h2 {
@@ -210,7 +229,12 @@ a {
     font-size: 19px;
     line-height: 1.9;
     color: #f4efe6;
-    margin-bottom: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -252,7 +276,7 @@ a {
 
 .proposito h2 {
     font-size: 38px;
-    color: var(--marrom-titulo);
+    color: #dd771c;
     margin-bottom: 25px;
 }
 
@@ -262,7 +286,7 @@ a {
 
     font-size: 19px;
     line-height: 1.8;
-    color: var(--marrom-texto);
+    color: #7b4d25;
 }
 
 /* RODAPÉ */
